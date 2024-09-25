@@ -13,6 +13,7 @@ using OAuth2.Configuration;
 using OAuth2.Infrastructure;
 using OAuth2.Models;
 using OAuth2.Client.Impl;
+using System.Web.UI;
 
 namespace Nataka
 {
@@ -23,6 +24,13 @@ namespace Nataka
         {
             InitializeComponent();
             var clientConfiguration = new ClientConfiguration();
+            {
+                ClientID = "clientid",
+                ClientSecret = "clientsecret",
+                RedirectUri = "link",
+                Scope = "user"
+
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
